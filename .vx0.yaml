@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://vx0.info/schemas/vx0/v1.json
+"version": 1
+"paths":
+  "include": []
+  "exclude":
+    - "**/*.gen.go"
+    - "**/*.gen.ts"
+    - "**/*.map"
+    - "**/*.min.css"
+    - "**/*.min.js"
+    - "**/*.min.mjs"
+    - "**/*.pb.go"
+    - "**/__generated__/**"
+    - "**/bower_components/**"
+    - "**/dist/**"
+    - "**/generated/**"
+    - "**/jspm_packages/**"
+    - "**/node_modules/**"
+    - "**/vendor/**"
+"tests":
+  "exclude": true
+  "patterns":
+    - "**/*.spec.*"
+    - "**/*.test.*"
+    - "**/*_test.go"
+    - "**/*_test.py"
+    - "**/__tests__/**"
+    - "**/e2e/**"
+    - "**/spec/**"
+    - "**/specs/**"
+    - "**/test/**"
+    - "**/test_*.py"
+    - "**/testdata/**"
+    - "**/tests/**"
+"scanners":
+  "code": true
+  "dependencies": true
+  "secrets": true
+  "infrastructure": true
+  "lint": true # linters; each tool's own config excludes apply; never affects fail_on
+"checks":
+  "fail_on": "high"
